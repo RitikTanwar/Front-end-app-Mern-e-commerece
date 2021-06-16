@@ -3,5 +3,5 @@ const baseURL = "https://flipkart-backened-rest-server.herokuapp.com";
 
 export const api = `${baseURL}/api`;
 export const generatePublicURL = (filename) => {
-  return `http://localhost:3000/public/${filename}`;
+  return `${baseURL}/${filename}`;
 };
