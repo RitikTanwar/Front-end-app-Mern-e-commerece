@@ -1,4 +1,5 @@
 import React from "react";
+import { BiRupee } from "react-icons/bi";
 import Card from "../UI/Card";
 
 /**
@@ -8,24 +9,40 @@ import Card from "../UI/Card";
 
 const PriceDetails = (props) => {
   return (
-    <Card headerLeft={"Price Details"} style={{ maxWidth: "380px" }}>
+    <Card style={{ maxWidth: "380px", width: "40%" }}>
       <div
         style={{
-          padding: "20px",
+          fontSize: "3vw",
+          fontWeight: "bold",
+          marginLeft: "5px",
+          marginRight: "10px",
+        }}
+      >
+        Price Details
+      </div>
+      <div
+        style={{
+          padding: "5px",
           boxSizing: "border-box",
         }}
       >
-        <div className="flexRow sb" style={{ margin: "10px 0" }}>
-          <div>Price ({props.totalItem} items)</div>
-          <div>{props.totalPrice}</div>
+        <div className="flexRow sb" style={{ fontSize: "2vw" }}>
+          <div>Price ({props.totalItem} items) : </div>
+          <div>
+            <BiRupee />
+            {props.totalPrice}
+          </div>
         </div>
-        <div className="flexRow sb" style={{ margin: "10px 0" }}>
-          <div>Delivery Charges</div>
-          <div>FREE</div>
+        <div className="flexRow sb" style={{ fontSize: "2vw" }}>
+          <div>Delivery Charges : </div>
+          <div style={{ color: "green" }}>FREE</div>
         </div>
-        <div className="flexRow sb" style={{ margin: "10px 0" }}>
-          <div>Total Amount</div>
-          <div>{props.totalPrice}</div>
+        <div className="flexRow sb" style={{ fontSize: "2vw" }}>
+          <div>Total Amount : </div>
+          <div>
+            <BiRupee />
+            {props.totalPrice}
+          </div>
         </div>
       </div>
     </Card>

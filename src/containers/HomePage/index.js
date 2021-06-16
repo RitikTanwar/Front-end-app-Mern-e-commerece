@@ -8,10 +8,11 @@ import b2 from "./Home Images/b2.jpg";
 import b3 from "./Home Images/b3.jpg";
 import b4 from "./Home Images/b4.jpg";
 import topbanner from "./Home Images/topbanner.jpg";
+import "./style.css";
 
 const HomePage = (props) => {
   return (
-    <div style={{ width: "100vw" }}>
+    <div style={{ width: "100%" }}>
       <Layout>
         <div
           className="topbanner"
@@ -29,13 +30,11 @@ const HomePage = (props) => {
               src={b1}
               alt=""
               style={{
-                // height: "280px/",
-                // marginLeft: "auto",
-                // marginRight: "auto",
-                width: "100%",
-                objectFit: "contain",
-                // overflow: "scroll",
+                height: window.innerWidth > 700 ? "350px" : "17vh",
+                objectFit: "cover",
+                padding: "10px",
               }}
+              className="banimg"
             />
           </a>
           <a style={{ display: "block" }}>
@@ -43,11 +42,11 @@ const HomePage = (props) => {
               src={b2}
               alt=""
               style={{
-                // height: "280px",
-                // marginLeft: "auto",
-                // marginRight: "auto",
-                width: "100%",
+                height: window.innerWidth > 700 ? "350px" : "17vh",
+                objectFit: "cover",
+                padding: "10px",
               }}
+              className="banimg"
             />
           </a>
           <a style={{ display: "block" }}>
@@ -55,11 +54,11 @@ const HomePage = (props) => {
               src={b3}
               alt=""
               style={{
-                // height: "280px",
-                // marginLeft: "auto",
-                // marginRight: "auto",
-                width: "100%",
+                height: window.innerWidth > 700 ? "350px" : "17vh",
+                objectFit: "cover",
+                padding: "10px",
               }}
+              className="banimg"
             />
           </a>
           <a style={{ display: "block" }}>
@@ -67,11 +66,11 @@ const HomePage = (props) => {
               src={b4}
               alt=""
               style={{
-                // height: "280px",
-                // marginLeft: "auto",
-                // marginRight: "auto",
-                width: "100%",
+                height: window.innerWidth > 700 ? "350px" : "17vh",
+                objectFit: "cover",
+                padding: "10px",
               }}
+              className="banimg"
             />
           </a>
         </Carousel>

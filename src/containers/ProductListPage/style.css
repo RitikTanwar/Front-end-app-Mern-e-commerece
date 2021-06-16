@@ -4,6 +4,7 @@
     border:1px solid wheat;
     box-shadow: 0 0 2px -2px black;
     overflow-x: scroll;
+    background-color: white;
 }
 .card::-webkit-scrollbar {
     display: none;

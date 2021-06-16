@@ -14,7 +14,10 @@ const Rating = (props) => {
         padding: "2px 5px",
       }}
     >
-      {props.value} <IoIosStar />
+      {props.value +
+        "." +
+        (props.value != "5" ? Math.round(Math.random() * 10) : 0)}{" "}
+      <IoIosStar />
     </span>
   );
 };

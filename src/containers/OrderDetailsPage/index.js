@@ -57,7 +57,7 @@ const OrderDetailsPage = (props) => {
     <Layout>
       <div
         style={{
-          width: "1160px",
+          // width: "1160px",
           margin: "10px auto",
         }}
       >
@@ -86,35 +86,39 @@ const OrderDetailsPage = (props) => {
           <Card
             style={{ display: "flex", padding: "20px 0", margin: "10px 0" }}
           >
-            <div className="flexRow">
-              <div className="delItemImgContainer">
-                <img
-                  src={generatePublicURL(item.productId.productImages[0].img)}
-                  alt=""
-                />
+            <div>
+              <div className="flexRow" style={{ marginBottom: "50px" }}>
+                <div className="delItemImgContainer">
+                  <img
+                    src={generatePublicURL(item.productId.productImages[0].img)}
+                    alt=""
+                  />
+                </div>
+                <div style={{ width: "250px" }}>
+                  <div className="delItemName">{item.productId.name}</div>
+                  <Price value={item.payablePrice} />
+                </div>
               </div>
-              <div style={{ width: "250px" }}>
-                <div className="delItemName">{item.productId.name}</div>
-                <Price value={item.payablePrice} />
-              </div>
-            </div>
-            <div style={{ padding: "25px 50px" }}>
-              <div className="orderTrack">
-                {orderDetails.orderStatus.map((status) => (
-                  <div
-                    className={`orderStatus ${
-                      status.isCompleted ? "active" : ""
-                    }`}
-                  >
+              <div style={{ padding: "25px 50px" }}>
+                <div className="orderTrack">
+                  {orderDetails.orderStatus.map((status) => (
                     <div
-                      className={`point ${status.isCompleted ? "active" : ""}`}
-                    ></div>
-                    <div className="orderInfo">
-                      <div className="status">{status.type}</div>
-                      <div className="date">{formatDate(status.date)}</div>
+                      className={`orderStatus ${
+                        status.isCompleted ? "active" : ""
+                      }`}
+                    >
+                      <div
+                        className={`point ${
+                          status.isCompleted ? "active" : ""
+                        }`}
+                      ></div>
+                      <div className="orderInfo">
+                        <div className="status">{status.type}</div>
+                        <div className="date">{formatDate(status.date)}</div>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
             <div style={{ fontWeight: "500", fontSize: 14 }}>

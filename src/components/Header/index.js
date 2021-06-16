@@ -214,7 +214,7 @@ const Header = (props) => {
         <div
           style={{
             padding: "0 10px",
-            width: "40%",
+            width: "36%",
           }}
         >
           <div className="searchInputContainer">
@@ -237,7 +237,11 @@ const Header = (props) => {
             menu={
               <a className="more">
                 <span>More</span>
-                <IoIosArrowDown />
+                <IoIosArrowDown
+                  style={{
+                    color: "#fff",
+                  }}
+                />
               </a>
             }
             menus={[
@@ -251,7 +255,7 @@ const Header = (props) => {
           <div>
             <a href="/cart" className="cart">
               <Cart count={Object.keys(cart.cartItems).length} />
-              <span style={{ margin: "0 10px" }}>Cart</span>
+              <span>Cart</span>
             </a>
           </div>
         </div>

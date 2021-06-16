@@ -51,7 +51,7 @@ const OrderPage = (props) => {
                     <BiRupee />
                     {item.payablePrice}
                   </div>
-                  <div>{order.paymentStatus}</div>
+                  <div style={{ fontSize: "12px" }}>{order.paymentStatus}</div>
                 </div>
               </Link>
             </Card>

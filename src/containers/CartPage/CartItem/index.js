@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { generatePublicURL } from "../../../urlConfig";
+import { BiRupee } from "react-icons/bi";
 import "./style.css";
 
 const CartItem = (props) => {
@@ -24,12 +25,14 @@ const CartItem = (props) => {
         <div className="cartProImgContainer">
           <img src={generatePublicURL(img)} alt={""} />
         </div>
-        <div className="cartItemDetails">
-          <div>
+        <div className="cartItemDetails" style={{ fontSize: "1.6vw" }}>
+          <div style={{ width: "50%" }}>
             <p>{name}</p>
-            <p>Rs. {price}</p>
+            <p style={{ fontWeight: "bolder" }}>
+              <BiRupee /> {price}
+            </p>
           </div>
-          <div>Delivery in 3 - 5 days</div>
+          <div style={{ width: "40%" }}>Delivery in 3 - 5 days</div>
         </div>
       </div>
       <div
@@ -39,12 +42,22 @@ const CartItem = (props) => {
         }}
       >
         {/* quantity control */}
-        <div className="quantityControl">
+        <div
+          className="quantityControl"
+          style={{
+            width: "16vw",
+            alignItems: "center",
+            justifyContent: "center",
+            marginLeft: "10px",
+          }}
+        >
           <button onClick={onQuantityDecrement}>-</button>
           <input value={qty} readOnly />
           <button onClick={onQuantityIncrement}>+</button>
         </div>
-        <button className="cartActionBtn">save for later</button>
+        <button className="cartActionBtn" style={{ fontSize: "1.5vw" }}>
+          Save for later
+        </button>
         <button
           className="cartActionBtn"
           onClick={() => props.onRemoveCartItem(_id)}

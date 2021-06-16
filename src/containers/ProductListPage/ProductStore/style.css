@@ -1,14 +1,16 @@
 .productContainer{
     width: 200px;
-    margin: 0 10px;
+    /* margin: 0 5px; */
     text-decoration: none;
+    background-color: white;
+    color: black;
 }
 .productContainer .productImgContainer{
     width: 150px;
     height: 150px;
     overflow: hidden;
     text-align: center;
-    margin: 10px auto;
+    margin: px auto;
 }
 .productContainer .productImgContainer img{
     max-width: 100%;
@@ -21,7 +23,11 @@
     text-decoration:none;
 }
 .productPrice{
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 16px;
+    /* font-weight: bold; */
     margin: 5px 0;
+}
+.productmrp{
+    font-size: 10px;
+    text-decoration: line-through;
 }

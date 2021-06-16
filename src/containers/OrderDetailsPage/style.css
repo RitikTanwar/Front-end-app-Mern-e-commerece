@@ -1,6 +1,8 @@
 .delAdrContainer{
     display: flex;
     box-sizing: border-box;
+    max-width: 100%;
+
 }
 .delTitle{
     font-size: 15px;
@@ -23,10 +25,9 @@
     padding: 20px;
     border-right: 1px solid #eee;
 }
-.delMoreActionContainer{
+/* .delMoreActionContainer{
     padding: 20px;
-}
-
+} */
 .delItemImgContainer{
     width: 75px;
     height: 75px;
@@ -40,7 +41,7 @@
 }
 
 .orderTrack{
-    width: 400px;
+    width: 250px;
     display: flex;
 }
 .orderStatus{

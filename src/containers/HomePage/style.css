@@ -1,0 +1,10 @@
+.banimg {
+  height: "40vh";
+  object-fit: "cover";
+  padding: "10px";
+}
+@media (max-width: 700px) {
+  .banimg {
+    height: 200px;
+  }
+}

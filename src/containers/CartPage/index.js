@@ -63,7 +63,38 @@ const CartPage = (props) => {
   return (
     <Layout>
       <div className="cartContainer" style={{ alignItems: "flex-start" }}>
-        <Card headerLeft={"My Cart"} headerRight={"Delvier to"}>
+        <Card>
+          <div
+            style={{
+              display: "flex",
+              height: "50px",
+              justifyContent: "space-between",
+              width: "100%",
+              alignItems: "center",
+              border: "1px solid rgb(220,220,220)",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "1.7vw",
+                fontWeight: "bold",
+                marginLeft: "10px",
+                width: "70%",
+              }}
+            >
+              My Cart
+            </div>
+            <div
+              style={{
+                fontSize: "1.7vw",
+                fontWeight: "bold",
+                alignItems: "center",
+                width: "30%",
+              }}
+            >
+              Deliver to
+            </div>
+          </div>
           {Object.keys(cartItems).map((keys, index) => (
             <CartItem
               key={index}
@@ -84,7 +115,7 @@ const CartPage = (props) => {
               boxSizing: "border-box",
             }}
           >
-            <div style={{ width: "250px" }}>
+            <div style={{ width: "30%", fontSize: "2vw", minWidth: "150px" }}>
               <MaterialButton
                 title="PLACE ORDER"
                 onClick={() => props.history.push(`/checkout`)}

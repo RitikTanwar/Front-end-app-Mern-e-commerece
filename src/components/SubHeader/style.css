@@ -18,13 +18,14 @@
     justify-content: space-evenly;
     position: relative;
 }
+
 .subHeader> ul > li>span{
-    display:block;
+    display:flex;
     align-items: center;
     height :40px;
     cursor: pointer;
     padding: 0 10px ;
-    font-size:8px;
+    font-size: 1.1vw;
 }
 
 .subHeader> ul > li>span:hover{
@@ -43,18 +44,20 @@
 }
 .subHeader> ul > li:hover ul{
     display: block;
+    transition-delay: 1s;
     z-index: 2;
 }
 .subHeader> ul > li>ul>li{
     float: left;
-    margin: 0 20px;
+    font-size: 1.3vw;
+    margin: 0 10px;
     min-height: 80vh;
 }
 
 .subHeader> ul > li>ul>li>a{
     font-weight: bold;
-    display: block;
-    font-size: 13px;
+    display: flex;
+    font-size: 1.3vw;
 }
 
 .subHeader> ul > li>ul>li a{
@@ -62,4 +65,20 @@
     display: block;
     text-decoration: none;
     color:rgb(58, 58, 58);
+}
+@media(max-width:600px){
+    .subHeader{
+        height: 3vh;
+    }
+    .subHeader> ul > li>span{
+        margin-top: -10px;
+        font-size: 1.5vw;
+        font-weight: 800;
+    }
+    .subHeader> ul > li>ul{
+        margin-top: -10px;
+    }
+    .subHeader> ul > li>ul>li{
+        min-height: 30vh;
+    }
 }

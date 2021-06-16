@@ -6,8 +6,9 @@ const Price = (props) => {
     <div
       style={{
         fontSize: props.fontSize ? props.fontSize : "14px",
-        fontWeight: "bold",
+        // fontWeight: "bold",
         margin: "5px 0",
+        color: "black",
       }}
     >
       <BiRupee />
